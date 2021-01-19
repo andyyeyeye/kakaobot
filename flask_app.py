@@ -8,9 +8,6 @@ def hello_world():
 
 @app.route('/api/<apicall>')
 def hello_user(apicall):
-    file=open('log.txt','a')
-    file.write(apicall+'\n')
-    file.close()
     try:
         a = apicall.split("@2@")
         result = chatbot(a[0],a[1],a[2],a[3])
